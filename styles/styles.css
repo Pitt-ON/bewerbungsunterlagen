@@ -42,13 +42,22 @@ body {
   margin-bottom: 25px;
 }
 
-.about_description {
+.persönliche_daten {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   color: #595959;
   width: 400px;
+}
+
+.pd_type {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+  margin-right: 10px;
 }
 
 /* project styles */
