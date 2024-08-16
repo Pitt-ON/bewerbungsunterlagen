@@ -16,7 +16,7 @@ body {
 .main_content {
   background-color: #ffffff;
   box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
-  padding: 105px 90px;
+  padding: 90px;
 }
 
 /* about styles */
@@ -141,6 +141,8 @@ body {
   font-size: 16px;
   line-height: 20px;
   color: #fb6d3a;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .period {
@@ -183,7 +185,8 @@ body {
   font-size: 16px;
   line-height: 20px;
   color: #fb6d3a;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 .department {
@@ -192,7 +195,8 @@ body {
   font-size: 14px;
   line-height: 17px;
   color: #000000;
-  margin-bottom: 10px;
+  margin-top: 0px;
+  margin-bottom: 20px;
 }
 
 /* sidebar styles */
