@@ -175,8 +175,9 @@ body {
   color: #595959;
 }
 
-/* education styles */
-.education {
+/* bildungsweg styles */
+.bildungsweg {
+  margin-bottom: 45px;
 }
 
 .university {
@@ -197,6 +198,10 @@ body {
   color: #000000;
   margin-top: 0px;
   margin-bottom: 20px;
+}
+
+.w_kenntnisse {
+  margin-bottom: 45px;
 }
 
 /* sidebar styles */
