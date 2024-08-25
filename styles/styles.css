@@ -126,12 +126,12 @@ body {
   margin-bottom: 45px;
 }
 
-.work_position {
+.period {
   font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  color: #000000;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #a8a8a8;
   margin-bottom: 10px;
 }
 
@@ -145,12 +145,12 @@ body {
   margin-bottom: 10px;
 }
 
-.period {
+.work_position {
   font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 15px;
-  color: #a8a8a8;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
   margin-bottom: 10px;
 }
 
@@ -204,10 +204,45 @@ body {
   margin-bottom: 45px;
 }
 
+.kenntnisse_list {
+  list-style: none;
+  padding: 0;
+}
+
+.kenntnisse_list_item {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #595959;
+}
+
+.sprachen_list {
+  list-style: none;
+  padding: 0;
+}
+
+.sprachen_list_item {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #595959;
+}
+
+.sprachen_type {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+  margin-right: 10px;
+}
+
 /* sidebar styles */
 .sidebar {
   background-color: #1e2939;
-  padding-top: 40px;
+  padding-top: 90px;
   width: 370px;
 }
 
