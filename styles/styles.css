@@ -8,7 +8,14 @@ body {
 .main {
   display: flex;
   flex-direction: row-reverse;
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -48,7 +55,8 @@ body {
   font-size: 14px;
   line-height: 24px;
   color: #595959;
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
 }
 
 .pd_list {
@@ -243,7 +251,8 @@ body {
 .sidebar {
   background-color: #1e2939;
   padding-top: 90px;
-  width: 370px;
+  width: 30%;
+  min-width: 260px;
 }
 
 /* photo styly */
@@ -314,4 +323,51 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
+}
+
+@media screen and (max-width: 992px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding-top: 40px;
+  }
+
+  .main_content {
+    padding: 50px;
+  }
+
+  .photo {
+    display: block;
+    margin: 0 auto 30px auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main_content {
+    padding: 25px;
+  }
+
+  .about_position {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .about_name {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .sidebar {
+    padding-top: 30px;
+  }
+
+  .contacts,
+  .tech_skills,
+  .soft_skills {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
