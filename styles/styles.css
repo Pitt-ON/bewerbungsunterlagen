@@ -252,14 +252,14 @@ body {
   background-color: #1e2939;
   padding-top: 90px;
   width: 30%;
-  min-width: 260px;
+  /* min-width: 260px; */
 }
 
 /* photo styly */
 .photo {
   width: 250px;
   margin-bottom: 40px;
-  margin-left: 6px;
+  margin-left: 40px;
   margin-right: 40px;
 }
 
