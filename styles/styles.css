@@ -7,17 +7,17 @@
 /* шрифты сайта */
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: #f5f7fa;
+  background-color: #f1f5f9;
+  margin: 0;
 }
 
 /* main styles */
 .main {
-  display: flex;
-  flex-direction: row-reverse;
+  display: grid;
+  grid-template-columns: 320px 1fr;
   max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  overflow-x: hidden;
+  margin: 60px auto;
+  background: #ffffff;
 }
 
 /* .container {
@@ -29,7 +29,6 @@ body {
 /* main content style */
 .main_content {
   background-color: #ffffff;
-  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
   padding: 70px;
 }
 
@@ -40,20 +39,21 @@ body {
 
 .about_position {
   font-style: normal;
-  font-weight: 700;
-  font-size: 35px;
-  line-height: 42px;
-  color: #000000;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #64748b;
   margin-bottom: 25px;
 }
 
 .about_name {
   font-style: normal;
   font-weight: 700;
-  font-size: 45px;
+  font-size: 38px;
   line-height: 55px;
   color: #000000;
   margin-bottom: 25px;
+  letter-spacing: -0.5px;
 }
 
 .persönliche_daten {
@@ -137,8 +137,10 @@ body {
 } */
 
 /* work styles */
-.work {
-  margin-bottom: 45px;
+.work,
+.bildungsweg,
+.w_kenntnisse {
+  margin-bottom: 60px;
 }
 
 .period {
@@ -155,7 +157,7 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-  color: #fb6d3a;
+  color: #2563eb;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -192,7 +194,7 @@ body {
 
 /* bildungsweg styles */
 .bildungsweg {
-  margin-bottom: 45px;
+  margin-bottom: 60px;
 }
 
 .university {
@@ -216,7 +218,7 @@ body {
 }
 
 .w_kenntnisse {
-  margin-bottom: 45px;
+  margin-bottom: 60px;
 }
 
 .kenntnisse_list {
@@ -256,19 +258,18 @@ body {
 
 /* sidebar styles */
 .sidebar {
-  background-color: #1e2939;
-  padding-top: 90px;
-  width: 30%;
-  min-width: 280px;
+  background-color: #0f172a;
+  padding: 60px 30px;
 }
 
 /* photo styly */
 .photo {
-  display: block;
   width: 100%;
-  max-width: 250px;
+  max-width: 180px;
   height: auto;
+  display: block;
   margin: 0 auto 40px auto;
+  border-radius: 8px;
 }
 
 .contacts,
@@ -321,7 +322,7 @@ body {
 
 .tech_skills_item,
 .soft_skills_item {
-  color: #fb6d3a;
+  color: #2563eb;
 }
 
 .tech_skills_text,
@@ -333,23 +334,18 @@ body {
   line-height: 24px;
 }
 
-@media screen and (max-width: 992px) {
+@media (max-width: 992px) {
   .main {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   .sidebar {
-    width: 100%;
-    padding-top: 40px;
+    order: 2;
   }
 
   .main_content {
-    padding: 50px;
-  }
-
-  .photo {
-    display: block;
-    margin: 0 auto 30px auto;
+    order: 1;
+    padding: 40px;
   }
 }
 
