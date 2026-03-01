@@ -3,33 +3,27 @@
 *::after {
   box-sizing: border-box;
 }
-
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   background: linear-gradient(to bottom, #f8fafc, #eef2f7);
-}
-
-/* ===== Layout ===== */
-
+} /* ===== Layout ===== */
 .main {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: minmax(260px, 300px) 1fr;
   max-width: 1200px;
   margin: 80px auto;
   background: #ffffff;
+  min-width: 0;
 }
-
 .main_content {
   padding: 70px;
-}
-
-/* ===== About ===== */
-
+  min-width: 0;
+  overflow-wrap: break-word;
+} /* ===== About ===== */
 .about {
   margin-bottom: 40px;
 }
-
 .about_position {
   font-weight: 600;
   font-size: 20px;
@@ -37,44 +31,33 @@ body {
   color: #64748b;
   margin-bottom: 25px;
 }
-
 .about_name {
   font-weight: 700;
   font-size: 38px;
   line-height: 46px;
   margin-bottom: 25px;
   letter-spacing: -0.5px;
-}
-
-/* ===== Persönliche Daten ===== */
-
+} /* ===== Persönliche Daten ===== */
 .persönliche_daten {
   font-size: 14px;
   line-height: 1.6;
   color: #334155;
 }
-
 .pd_list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .pd_list_item {
-  display: flex;
-  gap: 8px;
   margin-bottom: 6px;
-  align-items: flex-start;
+  line-height: 1.6;
+  word-break: break-word;
 }
-
 .pd_type {
-  flex-shrink: 0;
-  min-width: 150px;
   font-weight: 600;
+  margin-right: 6px;
 }
-
 /* ===== Section titles ===== */
-
 .title {
   font-weight: 700;
   font-size: 18px;
@@ -83,27 +66,22 @@ body {
   color: #0f172a;
   margin-bottom: 25px;
 }
-
 /* ===== Work & Education ===== */
-
 .work,
 .bildungsweg,
 .w_kenntnisse {
   margin-bottom: 60px;
 }
-
 .work + .work,
 .bildungsweg + .bildungsweg {
   padding-top: 40px;
   border-top: 1px solid #e2e8f0;
 }
-
 .period {
   font-size: 12px;
   color: #94a3b8;
   margin-bottom: 10px;
 }
-
 .organization,
 .university {
   font-weight: 700;
@@ -112,31 +90,25 @@ body {
   margin: 10px 0;
   transition: opacity 0.2s ease;
 }
-
 .organization:hover {
   opacity: 0.8;
 }
-
 .work_position {
   font-weight: 700;
   font-size: 16px;
   margin-bottom: 10px;
 }
-
 .department {
   font-weight: 700;
   font-size: 14px;
   margin-bottom: 20px;
 }
-
 /* ===== Lists ===== */
-
 .work_list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .work_list_item {
   position: relative;
   padding-left: 18px;
@@ -145,7 +117,6 @@ body {
   line-height: 1.6;
   color: #334155;
 }
-
 .work_list_item::before {
   content: "";
   position: absolute;
@@ -156,27 +127,26 @@ body {
   background-color: #1d4ed8;
   border-radius: 50%;
 }
-
 .kenntnisse_list,
 .sprachen_list {
   list-style: none;
   padding: 0;
 }
-
 .kenntnisse_list_item,
 .sprachen_list_item {
   font-size: 14px;
   line-height: 1.6;
   color: #334155;
 }
-
+.sprachen_type {
+  font-weight: 600;
+  margin-right: 6px;
+}
 /* ===== Sidebar ===== */
-
 .sidebar {
   background: linear-gradient(180deg, #0f172a, #111827);
   padding: 60px 30px;
 }
-
 .photo {
   width: 100%;
   max-width: 180px;
@@ -185,13 +155,11 @@ body {
   margin: 0 auto 40px auto;
   border-radius: 8px;
 }
-
 .contacts,
 .tech_skills,
 .soft_skills {
   margin-bottom: 45px;
 }
-
 .sidebar_title {
   color: #ffffff;
   font-weight: 700;
@@ -199,79 +167,60 @@ body {
   margin-bottom: 20px;
   letter-spacing: 0.5px;
 }
-
 .contact_type {
   font-weight: 600;
   color: #ffffff;
 }
-
 .contact_link {
   color: #ffffff;
   opacity: 0.6;
   transition: opacity 0.2s ease;
 }
-
 .contact_link:hover {
   opacity: 1;
 }
-
 .tech_skills_list,
 .soft_skills_list {
   padding-left: 18px;
   color: #ffffff;
 }
-
 .tech_skills_item,
 .soft_skills_item {
   color: #1d4ed8;
 }
-
 .tech_skills_text,
 .soft_skills_text {
   color: #ffffff;
   font-size: 14px;
   line-height: 1.6;
-}
-
-/* ===== Responsive ===== */
-
+} /* ===== Responsive ===== */
 @media (max-width: 992px) {
   .main {
     grid-template-columns: 1fr;
   }
-
   .main_content {
     padding: 40px;
   }
-
   .sidebar {
     position: static;
   }
 }
-
 @media (min-width: 992px) {
   .sidebar {
     position: sticky;
-    top: 40px;
-    height: fit-content;
+    top: 80px;
+    align-self: start;
   }
 }
-
 @media (max-width: 600px) {
   .main_content {
     padding: 25px;
   }
-
   .about_name {
     font-size: 30px;
     line-height: 38px;
   }
-
   .about_position {
     font-size: 18px;
-  }
-
-  .pd_list_item {
-    grid-template-columns: 120px 1fr;
   }
 }
