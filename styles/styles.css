@@ -1,8 +1,13 @@
+/* ================================
+   BASE
+================================ */
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
+
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
@@ -10,7 +15,11 @@ body {
   line-height: 1.65;
   color: #1e293b;
 }
-/* ===== Layout ===== */
+
+/* ================================
+   LAYOUT
+================================ */
+
 .main {
   display: grid;
   grid-template-columns: 300px 1fr;
@@ -21,55 +30,16 @@ body {
   box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
   overflow: hidden;
 }
+
 .main_content {
   padding: 80px 90px;
   min-width: 0;
 }
-/* ===== About ===== */
-.about {
-  margin-bottom: 40px;
-}
-.about_position {
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 30px;
-  color: #64748b;
-  margin-bottom: 25px;
-}
-.about_name {
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 1.2;
-  margin-bottom: 20px;
-}
-.profil {
-  font-size: 15px;
-  line-height: 1.7;
-  color: #475569;
-  max-width: 650px;
-  margin-bottom: 40px;
-}
-/* ===== Persönliche Daten ===== */
-.persönliche_daten {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #334155;
-}
-.pd_list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.pd_list_item {
-  margin-bottom: 6px;
-  line-height: 1.6;
-  word-break: break-word;
-}
-.pd_type {
-  font-weight: 600;
-  margin-right: 6px;
-}
-/* ===== Section titles ===== */
+
+/* ================================
+   TYPOGRAPHY
+================================ */
+
 .title {
   font-weight: 700;
   font-size: 14px;
@@ -78,143 +48,226 @@ body {
   color: #64748b;
   margin-bottom: 30px;
 }
-/* ===== Work & Education ===== */
+
+.about_position {
+  font-weight: 600;
+  font-size: 20px;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.about_name {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.profil {
+  font-size: 15px;
+  color: #475569;
+  max-width: 650px;
+  margin-bottom: 50px;
+}
+
+/* ================================
+   SECTIONS SPACING
+================================ */
+
+.about,
 .work,
 .bildungsweg,
 .w_kenntnisse {
   margin-bottom: 60px;
 }
-.work + .work,
-.bildungsweg + .bildungsweg {
-  padding-top: 40px;
-  border-top: 1px solid #e2e8f0;
-}
-.work > div {
-  padding: 25px 0;
-  border-bottom: 1px solid #f1f5f9;
+
+/* ================================
+   PERSONAL DATA
+================================ */
+
+.persönliche_daten {
+  font-size: 14px;
+  color: #334155;
 }
 
-.work > div:last-child {
-  border-bottom: none;
+.pd_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
+.pd_list_item {
+  margin-bottom: 6px;
+  word-break: break-word;
+}
+
+.pd_type {
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+/* ================================
+   TIMELINE (Work + Education)
+================================ */
+
+.work,
+.bildungsweg {
+  position: relative;
+  padding-left: 40px;
+}
+
+.work::before,
+.bildungsweg::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e2e8f0;
+}
+
+.work > div,
+.bildungsweg > div {
+  position: relative;
+  padding: 25px 0 25px 20px;
+}
+
+.work > div::before,
+.bildungsweg > div::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 30px;
+  width: 10px;
+  height: 10px;
+  background: #1d4ed8;
+  border-radius: 50%;
+}
+
+.work > div:hover {
+  background: #f8fafc;
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+
+/* ================================
+   WORK CONTENT
+================================ */
+
 .period {
   font-size: 12px;
   color: #94a3b8;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
+
 .organization,
 .university {
   font-weight: 700;
   font-size: 16px;
   color: #1d4ed8;
-  margin: 10px 0;
-  transition: opacity 0.2s ease;
+  margin: 8px 0;
 }
-.organization:hover {
-  opacity: 0.8;
-}
+
 .work_position {
   font-weight: 600;
   font-size: 15px;
-  margin-bottom: 10px;
   color: #475569;
 }
-.department {
-  font-weight: 700;
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-/* ===== Lists ===== */
+
 .work_list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin-top: 10px;
 }
+
 .work_list_item {
   position: relative;
   padding-left: 18px;
   margin-bottom: 8px;
   font-size: 14px;
-  line-height: 1.6;
   color: #334155;
 }
+
 .work_list_item::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 9px;
+  top: 8px;
   width: 6px;
   height: 6px;
   background-color: #1d4ed8;
   border-radius: 50%;
 }
-.kenntnisse_list,
-.sprachen_list {
+
+/* ================================
+   KEYWORDS
+================================ */
+
+.keyword_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   list-style: none;
   padding: 0;
 }
-.kenntnisse_list_item,
-.sprachen_list_item {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #334155;
+
+.keyword_list li {
+  background: #f1f5f9;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
 }
-.sprachen_type {
-  font-weight: 600;
-  margin-right: 6px;
-}
-/* ===== Sidebar ===== */
+
+/* ================================
+   SIDEBAR
+================================ */
+
 .sidebar {
   background: linear-gradient(180deg, #0f172a, #0b1220);
   padding: 70px 35px;
   color: #ffffff;
 }
+
 .photo {
+  display: block;
   width: 100%;
   max-width: 170px;
-  margin: 0 auto 50px;
+  height: auto;
+  margin: 0 auto 50px auto; /* центрирование */
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
+
+.sidebar_title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
 .contacts,
 .tech_skills,
 .soft_skills {
   margin-bottom: 45px;
 }
-.sidebar_title {
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 20px;
-  margin-bottom: 20px;
-  letter-spacing: 0.5px;
-}
+
 .contact_type {
   font-weight: 600;
-  color: #ffffff;
 }
+
 .contact_link {
   color: #ffffff;
-  opacity: 0.6;
-  transition: opacity 0.2s ease;
+  opacity: 0.7;
+  transition: 0.2s;
 }
+
 .contact_link:hover {
   opacity: 1;
 }
-.tech_skills_list,
-.soft_skills_list {
-  padding-left: 18px;
-  color: #ffffff;
-}
-.tech_skills_item,
-.soft_skills_item {
-  color: #1d4ed8;
-}
-.tech_skills_text,
-.soft_skills_text {
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 1.6;
-} /* ===== Responsive ===== */
+
+/* ================================
+   RESPONSIVE
+================================ */
+
 @media (max-width: 992px) {
   .main {
     grid-template-columns: 1fr;
@@ -230,94 +283,35 @@ body {
   .main_content {
     padding: 40px 30px;
   }
-}
-@media (min-width: 992px) {
-  .sidebar {
-    position: sticky;
-    top: 80px;
-    align-self: start;
+
+  .work,
+  .bildungsweg {
+    padding-left: 0;
+  }
+
+  .work::before,
+  .bildungsweg::before {
+    display: none;
   }
 }
+
 @media (max-width: 600px) {
-  .main_content {
-    padding: 25px;
-  }
   .about_name {
     font-size: 30px;
-    line-height: 38px;
   }
+
   .about_position {
     font-size: 18px;
   }
-}
-/* ===== Timeline ===== */
 
-.work {
-  position: relative;
-  padding-left: 40px;
+  .main_content {
+    padding: 25px;
+  }
 }
 
-.work::before {
-  content: "";
-  position: absolute;
-  left: 12px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: #e2e8f0;
-}
-
-.work > div {
-  position: relative;
-  padding: 25px 0 25px 20px;
-}
-
-.work > div::before {
-  content: "";
-  position: absolute;
-  left: -30px;
-  top: 32px;
-  width: 10px;
-  height: 10px;
-  background: #1d4ed8;
-  border-radius: 50%;
-}
-.work > div:hover {
-  background: #f8fafc;
-  border-radius: 8px;
-  transition: 0.2s ease;
-}
-.bildungsweg {
-  position: relative;
-  padding-left: 40px;
-}
-
-.bildungsweg::before {
-  content: "";
-  position: absolute;
-  left: 12px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: #e2e8f0;
-}
-
-.bildungsweg > p {
-  position: relative;
-  padding-left: 20px;
-}
-
-.bildungsweg > p::before {
-  content: "";
-  position: absolute;
-  left: -30px;
-  top: 6px;
-  width: 10px;
-  height: 10px;
-  background: #1d4ed8;
-  border-radius: 50%;
-}
-/* ===== Print Version ===== */
+/* ================================
+   PRINT
+================================ */
 
 @media print {
   body {
@@ -329,26 +323,7 @@ body {
     box-shadow: none;
   }
 
-  .sidebar {
-    background: #0f172a;
-    -webkit-print-color-adjust: exact;
-  }
-
   .work > div:hover {
     background: none;
   }
-}
-.keyword_list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  list-style: none;
-  padding: 0;
-}
-
-.keyword_list li {
-  background: #f1f5f9;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 13px;
 }
