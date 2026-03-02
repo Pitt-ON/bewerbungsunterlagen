@@ -42,6 +42,13 @@ body {
   line-height: 1.2;
   margin-bottom: 20px;
 }
+.profil {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #475569;
+  max-width: 650px;
+  margin-bottom: 40px;
+}
 /* ===== Persönliche Daten ===== */
 .persönliche_daten {
   font-size: 14px;
@@ -318,9 +325,8 @@ body {
   }
 
   .main {
-    box-shadow: none;
     margin: 0;
-    max-width: 100%;
+    box-shadow: none;
   }
 
   .sidebar {
@@ -328,8 +334,7 @@ body {
     -webkit-print-color-adjust: exact;
   }
 
-  a {
-    text-decoration: none;
-    color: inherit;
+  .work > div:hover {
+    background: none;
   }
 }
